@@ -1,0 +1,108 @@
+
+.top {
+    background-color: chartreuse;
+    background-image: url(/images/mountains.jpg);
+    background-size: cover;
+  /* background-color: #cccccc; */
+}
+
+.image-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5,minmax(1rem, 1fr));
+    place-items: center;
+}
+
+img {
+    object-fit: contain;
+    border-radius: 50px;
+    width: 250px;
+    margin:10px;
+}
+
+.title {
+    color: goldenrod;
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.navbar {
+    background-color: blueviolet;
+    font-size: 1.5rem;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(5,minmax(1rem, 1fr));
+    place-items: center;
+}
+
+a {
+    color:blue;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.about-me {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(1rem, 1fr));
+    justify-content:left;
+    background-color: grey;
+}
+.about-me p {
+    color: black;
+    padding: 20px;
+}    
+.subsection-title {
+    grid-column: 1/-1;
+    font-size: 1.5rem;
+    background-color: white;
+}    
+
+.social-icons {
+    grid-column: 2/3; /* icons to just display in middle column */
+    display: grid; /* sets up another inner grid */
+    grid-template-columns: repeat(10, 1fr); /* 5 equal size columns */
+    grid-auto-flow: column; /* allows for expansion*/
+    grid-auto-columns: 1fr;
+    align-items: center;
+  }
+
+.my-resume {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(1rem, 1fr));
+    justify-content:left;
+    background-color: grey;
+}
+.my-resume p {
+    color: black;
+    padding: 20px;
+}    
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1400px) {
+    img {   
+      width: 160px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    img {   
+      width: 100px;
+    }
+}
+
+  
+  /*
+  @media only screen and (max-width: 800px) {
+    .image-wrapper {   
+      grid-template-columns: 1fr;
+    }
+  }
+  */
