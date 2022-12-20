@@ -1,9 +1,8 @@
 
 .top {
-    background-color: chartreuse;
+    background-color: rgb(127,127,127);
     background-image: url(/images/mountains.jpg);
-    background-size: cover;
-  /* background-color: #cccccc; */
+    background-size: cover; /* cover => scales image to 100% cover ht & width and crops if needs to*/
 }
 
 .image-wrapper {
@@ -13,34 +12,35 @@
 }
 
 img {
-    object-fit: contain;
+    object-fit: contain; /* contain => onject fits within container but maintains its ht X W ratio so might be smaller than container size */
     border-radius: 50px;
     width: 250px;
-    margin:10px;
+    height: auto;
+    max-height: 250px;
+    max-width:100%;
 }
 
 .title {
-    color: goldenrod;
+    color: rgb(0,64,64);
     font-size: 2.4rem;
     text-align: center;
     font-family: sans-serif;
 }
 
 .navbar {
-    background-color: blueviolet;
-    font-size: 1.5rem;
-    padding: 50px;
     display: grid;
     grid-template-columns: repeat(5,minmax(1rem, 1fr));
     place-items: center;
+    background-color: rgb(193,127,127);
+    font-size: 1.5rem;
 }
 
 a {
-    color:blue;
+    color: rgb(64,0,64);
 }
 
 .navbar a:hover {
-    background-color: #ddd;
+    background-color: rgb(193,193,193);
     color: black;
 }
 
@@ -48,16 +48,18 @@ a {
     display: grid;
     grid-template-columns: repeat(3,minmax(1rem, 1fr));
     justify-content:left;
-    background-color: grey;
+    background-color: rgb(127,193,127);
 }
 .about-me p {
     color: black;
-    padding: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }    
+
 .subsection-title {
     grid-column: 1/-1;
     font-size: 1.5rem;
-    background-color: white;
+
 }    
 
 .social-icons {
@@ -73,36 +75,27 @@ a {
     display: grid;
     grid-template-columns: repeat(3,minmax(1rem, 1fr));
     justify-content:left;
-    background-color: grey;
+    background-color: rgb(127,127,193);
 }
 .my-resume p {
     color: black;
-    padding: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }    
-
-
-
-
-
+.my-portfolio {
+    background-color: rgb(193,127,127);
+}
 
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 1400px) {
-    img {   
-      width: 160px;
+@media only screen and (max-width: 1000px) {
+    .image-wrapper {
+        grid-template-columns: repeat(3,minmax(1rem, 1fr));
+    }
+    .navbar {
+        font-size: 1rem;
+    }
+    .title {
+        font-size: 1.4rem;
     }
 }
-@media only screen and (max-width: 800px) {
-    img {   
-      width: 100px;
-    }
-}
-
-  
-  /*
-  @media only screen and (max-width: 800px) {
-    .image-wrapper {   
-      grid-template-columns: 1fr;
-    }
-  }
-  */
